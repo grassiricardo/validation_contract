@@ -1,5 +1,11 @@
 require "validation_contract/version"
 
 module ValidationContract
-  # Your code goes here...
+  errors = []
+
+  def is_required value, message
+    if !value || value.length() <= 0
+      erros.push({message: message})
+    end
+  end
 end
