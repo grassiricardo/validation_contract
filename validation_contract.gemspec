@@ -11,7 +11,8 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Validations of the day day for your rails project.}
   spec.description   = %q{With this gem you will have several validations that are common on day day and that will make life much easier for dev. Validations can be returned in a simple and standardized way..}
-  spec.homepage      = ""
+  spec.homepage      = %q{https://github.com/grassiricardo/validation_contract}
+  spec.licenses      = ["MIT"]
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})

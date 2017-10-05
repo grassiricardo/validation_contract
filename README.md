@@ -41,3 +41,31 @@ Suggestion for the validations. Perform all the necessary validations and then b
     end
 
 This will check if there is any invalid field, if there is an arry returned with all the validations. This type of validation is very good for APIs that are being used for a form with many fields, so you return to the FRONT all errors at one time.
+
+## Validations
+
+- is_required => 'validate if field is required'
+- has_min_len => 'check if the field has a minimum of characters'
+- has_max_len => 'checks if the field has a maximum of characters'
+- is_fixed_len => Checks if there is an x ​​quantity of '
+- is_email => 'Check if email is valid'
+- errors => 'Return errors'
+- clear => 'Clears the arry error'
+- is_valid => 'Check whether this arry is valid or not'
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Added some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
+## Contributors
+
+[Ricardo Grassi](https://github.com/grassiricardo).
+
+## License
+
+ValidationContract is released under the [MIT License](http://www.opensource.org/licenses/MIT).
