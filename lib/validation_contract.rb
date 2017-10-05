@@ -28,12 +28,11 @@ class ValidationContract
     end
   end
 
-  # def is_email value, message
-  #   reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
-  #   if !value.match?('[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})')
-  #     @errors.push({message: message})
-  #   end
-  # end
+  def is_email value, message
+    if !value.match(/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i)
+      @errors.push({message: message})
+    end
+  end
 
   def erros
     return @errors
