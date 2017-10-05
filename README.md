@@ -62,7 +62,7 @@ This will check if there is any invalid field, if there is an arry returned with
 4. Push to the branch (git push origin my-new-feature)
 5. Create new Pull Request
 
-## Contributors
+## Contributor
 
 [Ricardo Grassi](https://github.com/grassiricardo).
 
