@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["grassiricardo"]
   spec.email         = ["grassiricardorg@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Validations of the day day for your rails project.}
+  spec.description   = %q{With this gem you will have several validations that are common on day day and that will make life much easier for dev. Validations can be returned in a simple and standardized way..}
   spec.homepage      = ""
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
