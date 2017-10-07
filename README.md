@@ -1,4 +1,5 @@
 # ValidationContract
+[![Gem Version](https://badge.fury.io/rb/parallel_tests.svg)](https://rubygems.org/gems/validation_contract)
 
 Validations of the day day for your rails project
 
