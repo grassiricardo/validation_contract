@@ -1,5 +1,8 @@
 # ValidationContract
 [![Gem Version](https://badge.fury.io/rb/validation_contract.svg)](https://rubygems.org/gems/validation_contract)
+[![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)
+
+
 
 Validations of the day day for your rails project
 
