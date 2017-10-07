@@ -1,3 +1,5 @@
+require "validation_contract/version"
+
 module ValidationContract
   class Validations
 
