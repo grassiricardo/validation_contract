@@ -3,7 +3,6 @@
 [![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)
 
 
-
 Validations of the day day for your rails project
 
 With this gem you will have several validations that are common on day day and that will make life much easier for dev. Validations can be returned in a simple and standardized way.
@@ -28,7 +27,7 @@ Or install it yourself as:
 
     require 'validation_contract'
 
-    validation_contract = ValidationContract.new
+    validation_contract = ValidationContract::Validations.new
 
 Verifying an invalid email, the return will be an array with message and its validation inside, this will occur for all the desired validations.
 
