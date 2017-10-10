@@ -72,6 +72,7 @@ This will check if there is any invalid field, if there is an arry returned with
 ## Contributor
 
 [Ricardo Grassi](https://github.com/grassiricardo).
+
 [Alan Lira](https://github.com/lira92).
 
 ## License
