@@ -110,6 +110,48 @@ RSpec.describe ValidationContract do
     end
   end
 
+  describe "this value is greater than?" do
+    before do
+      @validation_contract = ValidationContract::Validations.new
+    end
+
+    it "this value is not greater than" do
+      @validation_contract.is_greater_than(1, 2,'The value should be greater than 2')
+      expect(@validation_contract.erros[0][:message]).to eql('The value should be greater than 2')
+    end
+
+    it "this value is equal than" do
+      @validation_contract.is_greater_than(2, 2,'The value should be greater than 2')
+      expect(@validation_contract.erros[0][:message]).to eql('The value should be greater than 2')
+    end
+
+    it "this value is greater than" do
+      @validation_contract.is_greater_than(3, 2,'The value should be greater than 2')
+      expect(@validation_contract.erros).to eq([])
+    end
+  end
+
+  describe "this value is lower than?" do
+    before do
+      @validation_contract = ValidationContract::Validations.new
+    end
+
+    it "this value is not lower than" do
+      @validation_contract.is_lower_than(3, 2,'The value should be lower than 2')
+      expect(@validation_contract.erros[0][:message]).to eql('The value should be lower than 2')
+    end
+
+    it "this value is equal than" do
+      @validation_contract.is_lower_than(2, 2,'The value should be lower than 2')
+      expect(@validation_contract.erros[0][:message]).to eql('The value should be lower than 2')
+    end
+
+    it "this value is lower than" do
+      @validation_contract.is_lower_than(1, 2,'The value should be lower than 2')
+      expect(@validation_contract.erros).to eq([])
+    end
+  end
+
   describe "this return errors" do
     before do
       @validation_contract = ValidationContract::Validations.new
