@@ -37,6 +37,18 @@ module ValidationContract
       end
     end
 
+    def is_greater_than value, comparer, message
+      if value <= comparer
+        @errors.push({message: message})
+      end
+    end
+
+    def is_lower_than value, comparer, message
+      if value >= comparer
+        @errors.push({message: message})
+      end
+    end
+
     def erros
       return @errors
     end
