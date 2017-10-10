@@ -2,8 +2,9 @@
 [![Gem Version](https://badge.fury.io/rb/validation_contract.svg)](https://rubygems.org/gems/validation_contract)
 [![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)
 
+This gem and its validations have been implemented on top of the ```Notification Pattern```, which allows API to return all the validations at a single time, improving the user experience.
 
-Validations of the day day for your rails project
+Validations of the day day for your rails project.
 
 With this gem you will have several validations that are common on day day and that will make life much easier for dev. Validations can be returned in a simple and standardized way.
 
@@ -47,15 +48,18 @@ This will check if there is any invalid field, if there is an arry returned with
 
 ## Validations
 
-- is_required => 'validate if field is required'
-- has_min_len => 'check if the field has a minimum of characters'
-- has_max_len => 'checks if the field has a maximum of characters'
-- is_fixed_len => Checks if there is an x ​​quantity of '
-- is_email => 'Check if email is valid'
-- errors => 'Return errors'
-- clear => 'Clears the arry error'
-- is_valid => 'Check whether this arry is valid or not'
-
+| Validation      | Example                                             | Done  |
+| -------------   |:---------------------------------------------------:| -----:|
+| is_required     | validate if field is required                       |   √   |
+| has_min_len     | check if the field has a minimum of characters      |   √   |
+| has_max_len     | checks if the field has a maximum of characters     |   √   |
+| is_fixed_len    | checks if there is an x ​​quantity of                 |   √   |
+| is_email        | heck if email is valid                              |   √   |
+| is_greater_than | valid if one number is greater than another         |   √   |
+| is_lower_than   | valid if one number is smaller than another         |   √   |
+| errors          | Return errors                                       |   √   |
+| clear           | Clears the arry error                               |   √   |
+| is_valid        | Check whether this arry is valid or not             |   √   |
 
 ## Contributing
 
@@ -68,6 +72,7 @@ This will check if there is any invalid field, if there is an arry returned with
 ## Contributor
 
 [Ricardo Grassi](https://github.com/grassiricardo).
+[Alan Lira](https://github.com/lira92).
 
 ## License
 
