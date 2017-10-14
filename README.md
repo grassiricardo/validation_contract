@@ -50,16 +50,16 @@ This will check if there is any invalid field, if there is an arry returned with
 
 | Validation      | Example                                             | Done  |
 | -------------   |:---------------------------------------------------:| -----:|
-| is_required     | validate if field is required                       |   √   |
-| has_min_len     | check if the field has a minimum of characters      |   √   |
-| has_max_len     | checks if the field has a maximum of characters     |   √   |
-| is_fixed_len    | checks if there is an x ​​quantity of                 |   √   |
-| is_email        | heck if email is valid                              |   √   |
-| is_greater_than | valid if one number is greater than another         |   √   |
-| is_lower_than   | valid if one number is smaller than another         |   √   |
-| errors          | Return errors                                       |   √   |
-| clear           | Clears the arry error                               |   √   |
-| is_valid        | Check whether this arry is valid or not             |   √   |
+| is_required     | validate if field is required                       |   V   |
+| has_min_len     | check if the field has a minimum of characters      |   V   |
+| has_max_len     | checks if the field has a maximum of characters     |   V   |
+| is_fixed_len    | checks if there is an x quantity of                 |   V   |
+| is_email        | heck if email is valid                              |   V   |
+| is_greater_than | valid if one number is greater than another         |   V   |
+| is_lower_than   | valid if one number is smaller than another         |   V   |
+| errors          | Return errors                                       |   V   |
+| clear           | Clears the arry error                               |   V   |
+| is_valid        | Check whether this arry is valid or not             |   V   |
 
 ## Contributing
 
