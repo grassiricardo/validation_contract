@@ -26,12 +26,12 @@ RSpec.describe ValidationContract do
     end
 
     it "is required" do
-      @validation_contract.is_required('', 'Value is required')
+      @validation_contract.required('', 'Value is required')
       expect(@validation_contract.erros).not_to be nil
     end
 
     it "not is required" do
-      @validation_contract.is_required('teste is_required', 'Value is required')
+      @validation_contract.required('teste required', 'Value is required')
       expect(@validation_contract.erros).to eq([])
     end
   end
@@ -84,7 +84,7 @@ RSpec.describe ValidationContract do
     end
 
     it "not has fixed length" do
-      @validation_contract.is_fixed_len('value', 6 , 'Value has fixed length 5')
+      @validation_contract.fixed_len('value', 6 , 'Value has fixed length 5')
       expect(@validation_contract.erros[0][:message]).to eql('Value has fixed length 5')
     end
 
@@ -100,12 +100,12 @@ RSpec.describe ValidationContract do
     end
 
     it "this email not valid" do
-      @validation_contract.is_email('test@test','This email is not valid')
+      @validation_contract.email('test@test','This email is not valid')
       expect(@validation_contract.erros[0][:message]).to eql('This email is not valid')
     end
 
     it "not has fixed length" do
-      @validation_contract.is_email('test@test.com','This email is not valid')
+      @validation_contract.email('test@test.com','This email is not valid')
       expect(@validation_contract.erros).to eq([])
     end
   end
@@ -116,17 +116,17 @@ RSpec.describe ValidationContract do
     end
 
     it "this value is not greater than" do
-      @validation_contract.is_greater_than(1, 2,'The value should be greater than 2')
+      @validation_contract.greater_than(1, 2,'The value should be greater than 2')
       expect(@validation_contract.erros[0][:message]).to eql('The value should be greater than 2')
     end
 
     it "this value is equal than" do
-      @validation_contract.is_greater_than(2, 2,'The value should be greater than 2')
+      @validation_contract.greater_than(2, 2,'The value should be greater than 2')
       expect(@validation_contract.erros[0][:message]).to eql('The value should be greater than 2')
     end
 
     it "this value is greater than" do
-      @validation_contract.is_greater_than(3, 2,'The value should be greater than 2')
+      @validation_contract.greater_than(3, 2,'The value should be greater than 2')
       expect(@validation_contract.erros).to eq([])
     end
   end
@@ -158,7 +158,7 @@ RSpec.describe ValidationContract do
     end
 
     it "this two erros is return 2 errors" do
-      @validation_contract.is_email('test@test','This email is not valid')
+      @validation_contract.email('test@test','This email is not valid')
       @validation_contract.has_max_len('value', 3, 'Value has max length')
       expect(@validation_contract.erros.count).to eq(2)
       expect(@validation_contract.erros[0][:message]).to eql('This email is not valid')
@@ -173,7 +173,7 @@ RSpec.describe ValidationContract do
   describe "this clear errors" do
     before do
       @validation_contract = ValidationContract::Validations.new
-      @validation_contract.is_email('test@test','This email is not valid')
+      @validation_contract.email('test@test','This email is not valid')
       @validation_contract.has_max_len('value', 3, 'Value has max length')
     end
 
@@ -192,7 +192,7 @@ RSpec.describe ValidationContract do
   describe "this validations is valid" do
     before do
       @validation_contract = ValidationContract::Validations.new
-      @validation_contract.is_email('test@test','This email is not valid')
+      @validation_contract.email('test@test','This email is not valid')
       @validation_contract.has_max_len('value', 3, 'Value has max length')
     end
 

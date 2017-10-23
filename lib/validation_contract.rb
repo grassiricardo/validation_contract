@@ -7,7 +7,7 @@ module ValidationContract
       @errors = []
     end
 
-    def is_required value, message
+    def required value, message
       if !value || value.length() <= 0
         @errors.push({message: message})
       end
@@ -25,25 +25,25 @@ module ValidationContract
       end
     end
 
-    def is_fixed_len value, len, message
+    def fixed_len value, len, message
       if value.length() != len
         @errors.push({message: message})
       end
     end
 
-    def is_email value, message
+    def email value, message
       if !value.match(/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i)
         @errors.push({message: message})
       end
     end
 
-    def is_greater_than value, comparer, message
+    def greater_than value, comparer, message
       if value <= comparer
         @errors.push({message: message})
       end
     end
 
-    def is_lower_than value, comparer, message
+    def lower_than value, comparer, message
       if value >= comparer
         @errors.push({message: message})
       end
