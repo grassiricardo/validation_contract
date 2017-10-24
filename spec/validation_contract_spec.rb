@@ -89,7 +89,7 @@ RSpec.describe ValidationContract do
     end
 
     it "has fixed length" do
-      @validation_contract.has_fixed_len('value', 5, 'Value has max length')
+      @validation_contract.is_fixed_len('value', 5, 'Value has max length')
       expect(@validation_contract.erros).to eq([])
     end
   end
