@@ -1,6 +1,8 @@
-# ValidationContract 
+# ValidationContract
 [![Gem Version](https://badge.fury.io/rb/validation_contract.svg)](https://rubygems.org/gems/validation_contract)
-[![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)
+![ruby](https://img.shields.io/badge/Ruby-2.4.2-green.svg)
+[![Build Status](https://travis-ci.org/grassiricardo/validation_contract.svg?branch=master)](https://travis-ci.org/grassiricardo/validation_contract)
+[![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6)
 
 This gem and its validations have been implemented on top of the ```Notification Pattern```, which allows API to return all the validations at a single time, improving the user experience.
 
