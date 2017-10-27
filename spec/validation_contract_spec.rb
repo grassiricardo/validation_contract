@@ -152,6 +152,22 @@ RSpec.describe ValidationContract do
     end
   end
 
+  describe "this value is a valid url?" do
+    before do
+      @validation_contract = ValidationContract::Validations.new
+    end
+
+    it "this url is not valid" do
+      @validation_contract.url('test','This url is not valid')
+      expect(@validation_contract.erros[0][:message]).to eql('This url is not valid')
+    end
+
+    it "this url is valid" do
+      @validation_contract.url('http://test.com','This url is not valid')
+      expect(@validation_contract.erros).to eq([])
+    end
+  end
+
   describe "this return errors" do
     before do
       @validation_contract = ValidationContract::Validations.new

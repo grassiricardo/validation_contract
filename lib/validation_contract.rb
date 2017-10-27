@@ -1,4 +1,5 @@
 require "validation_contract/version"
+require 'uri'
 
 module ValidationContract
   class Validations
@@ -45,6 +46,12 @@ module ValidationContract
 
     def lower_than value, comparer, message
       if value >= comparer
+        @errors.push({message: message})
+      end
+    end
+
+    def url value, message
+      if !value.match(URI.regexp)
         @errors.push({message: message})
       end
     end

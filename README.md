@@ -56,12 +56,13 @@ This will check if there is any invalid field, if there is an arry returned with
 | has_min_len     | check if the field has a minimum of characters      |   V   |
 | has_max_len     | checks if the field has a maximum of characters     |   V   |
 | fixed_len       | checks if there is an x quantity of                 |   V   |
-| email           | heck if email is valid                              |   V   |
+| email           | check if email is valid                             |   V   |
 | greater_than    | valid if one number is greater than another         |   V   |
 | lower_than      | valid if one number is smaller than another         |   V   |
 | errors          | Return errors                                       |   V   |
 | clear           | Clears the arry error                               |   V   |
 | valid           | Check whether this arry is valid or not             |   V   |
+| url             | check if url is valid                               |   V   |
 
 ## Contributing
 
