@@ -1,72 +1,58 @@
-require "validation_contract/version"
+require 'validation_contract/version'
 require 'uri'
 
 module ValidationContract
   class Validations
-
     def initialize
       @errors = []
     end
 
-    def required value, message
-      if !value || value.length() <= 0
-        @errors.push({message: message})
+    def required(value, message)
+      return @errors.push(message: message) if !value || value.length <= 0
+    end
+
+    def has_min_len(value, min, message)
+      return @errors.push(message: message) if !value || value.length < min
+    end
+
+    def has_max_len(value, max, message)
+      return @errors.push(message: message) if !value || value.length > max
+    end
+
+    def fixed_len(value, len, message)
+      return @errors.push(message: message) if value.length != len
+    end
+
+    def email(value, message)
+      unless value.match(/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i)
+        @errors.push(message: message)
       end
     end
 
-    def has_min_len value, min, message
-      if !value || value.length() < min
-        @errors.push({message: message})
-      end
+    def greater_than(value, comparer, message)
+      return @errors.push(message: message) if value <= comparer
     end
 
-    def has_max_len value, max, message
-      if !value || value.length() > max
-        @errors.push({message: message})
-      end
+    def lower_than(value, comparer, message)
+      return @errors.push(message: message) if value >= comparer
     end
 
-    def fixed_len value, len, message
-      if value.length() != len
-        @errors.push({message: message})
-      end
-    end
-
-    def email value, message
-      if !value.match(/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i)
-        @errors.push({message: message})
-      end
-    end
-
-    def greater_than value, comparer, message
-      if value <= comparer
-        @errors.push({message: message})
-      end
-    end
-
-    def lower_than value, comparer, message
-      if value >= comparer
-        @errors.push({message: message})
-      end
-    end
-
-    def url value, message
-      if !value.match(URI.regexp)
-        @errors.push({message: message})
+    def url(value, message)
+      unless value.match(URI.regexp)
+        @errors.push(message: message)
       end
     end
 
     def erros
-      return @errors
+      @errors
     end
 
     def clear
-      return @errors = []
+      @errors = []
     end
 
     def is_valid
-      return @errors.length == 0
+      @errors.length.zero?
     end
-
   end
 end
