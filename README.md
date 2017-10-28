@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/grassiricardo/validation_contract.svg?branch=master)](https://travis-ci.org/grassiricardo/validation_contract)
 [![Build Status](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6/status?branch=master)](https://app.codeship.com/projects/97a495a0-8bf9-0135-191d-3e39845176c6)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a9099988656b3a478a93/maintainability)](https://codeclimate.com/github/grassiricardo/validation_contract/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a9099988656b3a478a93/test_coverage)](https://codeclimate.com/github/grassiricardo/validation_contract/test_coverage)
+[![Dependency Status](https://gemnasium.com/badges/github.com/grassiricardo/validation_contract.svg)](https://gemnasium.com/github.com/grassiricardo/validation_contract)
 
 This gem and its validations have been implemented on top of the ```Notification Pattern```, which allows API to return all the validations at a single time, improving the user experience.
 
