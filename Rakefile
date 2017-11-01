@@ -4,7 +4,7 @@ require 'rubocop/rake_task'
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :default => :spec
+task default: :spec
 
 RuboCop::RakeTask.new(:rubocop_debug) do |t|
   t.options = ['-d']
